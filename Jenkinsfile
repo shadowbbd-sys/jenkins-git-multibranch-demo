@@ -8,6 +8,12 @@ pipeline {
                 echo 'This is my first CI/CD pipeline'
             }
         }
+        stage('Checkout') {
+            steps {
+                echo 'YOO BOY CHECKING OUT'
+                echo 'ab itni door a gye hain to chekout kar hi lete hain'
+            }
+        }
         
         stage('Build') {
             steps {
