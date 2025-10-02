@@ -1,31 +1,25 @@
 pipeline {
-    agent any // Run on any available agent
-
+    agent any
+    
     stages {
-        stage('Checkout') {
+        stage('Hello') {
             steps {
-                // This automatically checks out the correct branch
-                // that this pipeline job is configured to use.
-                checkout scm
-                echo 'Code checked out ho gya.'
+                echo 'Hello World from Jenkins!'
+                echo 'This is my first CI/CD pipeline'
             }
         }
-
+        
         stage('Build') {
             steps {
-                // Add your build command here
-                // Example for Node.js: sh 'npm install'
-                // Example for Maven:   sh 'mvn clean package'
-                echo 'project ban rha hai...'
+                echo 'Building the project...'
+                // Your build commands will go here
             }
         }
-
+        
         stage('Test') {
             steps {
-                // Add your test command here
-                // Example for Node.js: sh 'npm test'
-                // Example for Maven:   sh 'mvn test'
-                echo 'test ho rahe hai...'
+                echo 'Running tests...'
+                // Your test commands will go here
             }
         }
     }
