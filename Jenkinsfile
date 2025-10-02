@@ -8,7 +8,6 @@ pipeline {
                 echo 'This is my first CI/CD pipeline'
             }
         }
-    stages {
         stage('Checkout') {
             steps {
                 echo 'YOO BOY CHECKING OUT'
